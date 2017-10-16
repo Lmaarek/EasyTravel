@@ -1,0 +1,2 @@
+class HostStudent < ApplicationRecord
+end
