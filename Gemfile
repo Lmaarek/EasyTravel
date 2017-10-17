@@ -16,7 +16,9 @@ gem 'jquery-rails'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
-
+gem 'tzinfo-data'
+ gem 'wdm'
+ 
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
