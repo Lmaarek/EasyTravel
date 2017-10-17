@@ -10,10 +10,9 @@ class DinnersController < ApplicationController
 
   def create
     @dinner = Dinner.new(review_params)
-    @dinner.host_student = HostStudent.find_by(email: current_user.email)
-    raise
-    if @dinner.save
-      redirect_to dinner_path(@dinner)
+    @dinner.host_student = current_user.host_student
+    if @dinner.save!
+      redirect_to root_path
     else
       render :new
     end
@@ -23,10 +22,18 @@ class DinnersController < ApplicationController
     @dinner = Dinner.find(params[:id])
   end
 
+  def edit
+    @dinner = Dinner.find(params[:id])
+  end
+
+  def update
+
+  end
+
   private
 
   def review_params
-    params.require(:dinner).permit(:name, :place, :date, :description)
+    params.require(:dinner).permit(:name, :place, :date, :description, :host_student)
   end
 
   def host_student_params
