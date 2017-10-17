@@ -1,6 +1,6 @@
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,200,121,0.4) 0%, rgba(0,70,10,0.4) 50%), url('https://unsplash.it/1600/600');">
   <div class="banner-content">
-    <h1>EasyTravel</h1>
+    <h1>DayOne</h1>
     <p>You're welcome!</p>
     <a class="btn btn-primary btn-lg">Start now</a>
   </div>
@@ -10,21 +10,10 @@
       <span class>How it works</span>
   </div>
 </div>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-6">
-      <div class="card-home">
-        <h3 class="text-center">The survival kit</h3>
-        <p>A transport card</p>
-        <p>A bank account</p>
-        <p>A sim card</p>
-      </div>
-    </div>
-    <div class="col-xs-6 text-center">
-      <div class="card-home">
-        <h3 class="text-center">A local buddy</h3>
-      </div>
-    </div>
-  </div>
+<div class="text-center see-all-dinner">
+  <%= link_to "See all dinners", dinners_path, class: "btn btn-primary" %>
+</div>
+<div class="text-center see-all-dinner">
+  <%= link_to "Organise a dinner", new_dinner_path, class: "btn btn-primary" %>
 </div>
 
