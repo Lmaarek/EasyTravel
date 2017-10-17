@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   has_one :host_student
   has_one :incoming_student
+  validates :status, inclusion: { in: ["incoming student", "host student"]}
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
