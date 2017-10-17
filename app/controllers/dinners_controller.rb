@@ -10,8 +10,17 @@ class DinnersController < ApplicationController
 
   def create
     @dinner = Dinner.new(review_params)
-    @dinner.host_student = HostStudent.find(params[:id])
-    @dinner.save
+    @dinner.host_student = HostStudent.find_by(email: current_user.email)
+    raise
+    if @dinner.save
+      redirect_to dinner_path(@dinner)
+    else
+      render :new
+    end
+  end
+
+  def show
+    @dinner = Dinner.find(params[:id])
   end
 
   private

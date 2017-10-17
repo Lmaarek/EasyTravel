@@ -5,4 +5,14 @@ class User < ApplicationRecord
   has_one :incoming_student
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  # def new
+  #   @user = User.new
+  # end
+
+  # def create
+  #   @user = current_user
+  #   @user.host_student = @host_student
+  #   @user.save
+  # end
 end
