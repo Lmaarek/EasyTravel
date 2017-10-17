@@ -1,0 +1,5 @@
+<%= simple_form_for [@host_student, @dinner] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.submit "Organize a dinner", class: "btn btn-primary" %>
+<% end %>
