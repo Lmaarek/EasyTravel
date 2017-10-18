@@ -1,3 +1,5 @@
 <div class="dinner-name">
-  <h4>You created a dinner, <%= @dinner.host_student.first_name %>!</h4>
+  <h4><%= @dinner.name %> with <%= @dinner.host_student.first_name %>!</h4>
+  <p><%= @dinner.description %></p>
 </div>
+

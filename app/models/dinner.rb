@@ -1,4 +1,4 @@
 class Dinner < ApplicationRecord
-  has_many :incoming_student
+  has_many :dinner_incoming_students
   belongs_to :host_student
 end
