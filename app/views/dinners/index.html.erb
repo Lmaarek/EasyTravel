@@ -2,4 +2,5 @@
   <h2><%= dinner.name %></h2>
   <p><%= dinner.description %></p>
   <p><%= dinner.date %></p>
+  <%= link_to "Go", dinner_path(dinner), class: "btn btn-primary" %>
 <% end %>
